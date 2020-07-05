@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -34,7 +36,8 @@ a {
   margin: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
   display: block;
   margin: 0;
   font-weight: 700;
@@ -130,7 +133,7 @@ p {
   margin-left: auto;
 }
 
-.contact-links .item+.item {
+.contact-links .item + .item {
   margin-left: 30px;
 }
 
@@ -145,7 +148,10 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-item:hover, .contact-link-item:hover, .navigation-item:focus, .contact-link-item:focus {
+.navigation-item:hover,
+.contact-link-item:hover,
+.navigation-item:focus,
+.contact-link-item:focus {
   color: var(--focus-color);
 }
 
@@ -170,7 +176,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/body/pictures/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/body/pictures/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -213,7 +224,11 @@ p {
 
 /* Our advantages section */
 
-.advantages, .scope-of-business, .our-team, .our-clients, .footer {
+.advantages,
+.scope-of-business,
+.our-team,
+.our-clients,
+.footer {
   margin-top: 94px;
 }
 
@@ -257,7 +272,9 @@ p {
 
 /* Scope of business section */
 
-.scope-of-business h2, .our-team h2, .our-clients h2 {
+.scope-of-business h2,
+.our-team h2,
+.our-clients h2 {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -281,7 +298,7 @@ p {
   display: block;
 }
 
-.item>.title-white {
+.item > .title-white {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,7 +336,8 @@ p {
   padding-bottom: 35px;
   margin-right: 30px;
   background-color: #ffffff;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -341,7 +359,8 @@ p {
   margin-bottom: 16px;
 }
 
-.our-team h3, .our-team p {
+.our-team h3,
+.our-team p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -382,7 +401,8 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links .item:hover .social-links-icon, .social-links .item:focus {
+.social-links .item:hover .social-links-icon,
+.social-links .item:focus {
   fill: var(--primary-white-color);
 }
 
@@ -417,7 +437,8 @@ p {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list-link:hover, .clients-list-link:focus {
+.clients-list-link:hover,
+.clients-list-link:focus {
   border: 1px solid var(--focus-color);
 }
 
@@ -426,7 +447,8 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list-link:hover .client-logo, .clients-list-link:focus .client-logo {
+.clients-list-link:hover .client-logo,
+.clients-list-link:focus .client-logo {
   fill: var(--focus-color);
 }
 
@@ -480,7 +502,7 @@ p {
   align-items: center;
 }
 
-.social-media-list li+li {
+.social-media-list li + li {
   margin-left: 10px;
 }
 
@@ -507,11 +529,13 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-media-list .item:hover .social-links-icon, .social-media-list .item:focus .social-links-icon {
+.social-media-list .item:hover .social-links-icon,
+.social-media-list .item:focus .social-links-icon {
   fill: var(--primary-white-color);
 }
 
-.social-media-links .title-white, .subscribe .title-white {
+.social-media-links .title-white,
+.subscribe .title-white {
   margin-bottom: 20px;
 }
 
@@ -549,7 +573,8 @@ p {
   background-color: #f5f4fa;
   border-radius: 4px;
   border-style: var(--primary-white-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
@@ -557,7 +582,7 @@ p {
   background-color: var(--focus-color);
 }
 
-.filter-list li+li {
+.filter-list li + li {
   margin-left: 8px;
 }
 
@@ -604,7 +629,8 @@ p {
 }
 
 .project-item:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .project-item:hover .project-description {
@@ -641,7 +667,7 @@ p {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
-  background-color: var(--focus-color);
+  background-color: rgba(33, 150, 243, 0.9);
   border-width: 1px;
   border-style: solid;
   border-color: #eeeeee;
