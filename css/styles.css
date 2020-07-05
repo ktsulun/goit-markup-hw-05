@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+}
+
 :root {
   --primary-text-color: #757575;
   --title-nav-color: #212121;
@@ -76,13 +80,11 @@ p {
 .navigation {
   display: flex;
   align-items: center;
-
   position: fixed;
   z-index: 2;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
   background-color: #ffffff;
 }
 
@@ -400,7 +402,8 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links .item:hover {
+.social-links .item:hover,
+.social-links .item:focus {
   background-color: var(--focus-color);
 }
 
@@ -412,7 +415,7 @@ p {
 }
 
 .social-links .item:hover .social-links-icon,
-.social-links .item:focus {
+.social-links .item:focus .social-links-icon {
   fill: var(--primary-white-color);
 }
 
@@ -528,7 +531,8 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-media-list .item:hover {
+.social-media-list .item:hover,
+.social-media-list .item:focus {
   background-color: var(--focus-color);
 }
 
@@ -587,9 +591,11 @@ p {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color: var(--primary-white-color);
   background-color: var(--focus-color);
+  cursor: pointer;
 }
 
 .filter-list li + li {
@@ -638,12 +644,14 @@ p {
   margin-bottom: 0px;
 }
 
-.project-item:hover {
+.project-item > a:hover,
+.project-item > a:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.project-item:hover .project-description {
+.project-item > a:hover .project-description,
+.project-item > a:focus .project-description {
   transform: translateY(0);
 }
 
