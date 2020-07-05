@@ -15,11 +15,13 @@ html {
   --primary-black-color: #000000;
   --footer-adress-color: rgba(255, 255, 255, 0.6);
   --focus-color: #2196f3;
+  --body-padding: 80px;
 }
 
 /* General styles */
 
 body {
+  padding-top: var(--body-padding);
   font-weight: 400;
   font-family: Roboto, sans-serif;
 }
@@ -74,6 +76,14 @@ p {
 .navigation {
   display: flex;
   align-items: center;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
 }
 
 .main-navigation {
