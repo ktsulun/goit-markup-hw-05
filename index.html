@@ -71,9 +71,9 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a class="order-service-link" href="" target="_blank">
+          <button type="button" class="order-service-link" data-modal-open>
             Заказать услугу
-          </a>
+          </button>
         </div>
       </section>
 
@@ -525,10 +525,84 @@
 
           <div class="subscribe">
             <b class="title-white">Подпишитесь на рассылку</b>
+            <form class="subscribe-form">
+              <input
+                class="footer-email"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+              <button class="submitt" type="submit">
+                Подписаться
+                <svg class="submitt-icon">
+                  <use href="./images/symbol.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
-        <p class="copyright">2020&#448;Developed by GoIT Students</p>
       </div>
     </footer>
+    <div class="modal-backdrop hidden" data-modal>
+      <div class="modal-window">
+        <button class="modal-close-button" data-modal-close>
+          <svg>
+            <use href="./images/symbol.svg#icon-vector"></use>
+          </svg>
+        </button>
+        <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="callback-form" autocomplete="off">
+          <div class="input-group">
+            <input type="text" name="name" id="name" />
+            <label for="name">
+              <svg>
+                <use href="./images/symbol.svg#icon-person-black"></use>
+              </svg>
+              <span class="field-descriprion">Имя</span>
+            </label>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" name="phone" id="phone" />
+            <label for="phone">
+              <svg>
+                <use href=" ./images/symbol.svg#icon-phone-black"></use>
+              </svg>
+              <span class="field-descriprion">Телефон</span>
+            </label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" name="email" id="email" />
+            <label for="email">
+              <svg>
+                <use href=" ./images/symbol.svg#icon-email-black"></use>
+              </svg>
+              <span class="field-descriprion">Почта</span>
+            </label>
+          </div>
+
+          <div class="comment-container">
+            <textarea
+              name="comment"
+              id="comment"
+              cols="54"
+              rows="10"
+            ></textarea>
+            <label for="comment">
+              Комментарий
+            </label>
+          </div>
+          <label>
+            <input type="checkbox" name="licence-agreement" />
+            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+          </label>
+
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
