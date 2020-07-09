@@ -62,7 +62,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.hidden {
+.is-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -202,6 +202,7 @@ header {
 }
 
 .order-service-link {
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 200px;
@@ -320,6 +321,7 @@ header {
 /* Our team section */
 
 .our-team {
+  padding: 94px;
   background: #f5f4fa;
   text-align: center;
 }
@@ -612,7 +614,12 @@ header {
   margin: auto;
   width: 15px;
   height: 15px;
-  fill: var(--primary-black-color)
+  fill: var(--primary-black-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:hover.modal-close-button>svg, .modal-close-button:focus .modal-close-button>svg {
+  fill: var(--focus-color);
 }
 
 .modal-text {
@@ -624,6 +631,7 @@ header {
   letter-spacing: 0.03em;
   color: var(--title-nav-color);
   margin-bottom: 30px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-group {
@@ -631,17 +639,22 @@ header {
   margin-bottom: 28px;
 }
 
-.input-group input {
+.form-input {
   width: 448px;
   height: 40px;
   padding-left: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-group svg {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   fill: var(--title-nav-color);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-group label {
@@ -653,12 +666,124 @@ header {
   transform: translateY(-50%);
 }
 
-.input-group span {
+.field-descriprion {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 14;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), top 250ms cubic-bezier(0.4, 0, 0.2, 1), left 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group:hover .form-input, .input-group:focus .form-input {
+  border: 1px solid var(--focus-color);
+}
+
+.input-group:hover .field-descriprion, .input-group:focus .field-descriprion, .form-input:not(:placeholder-shown)~label>.field-descriprion {
+  color: var(--focus-color);
+  top: -150%;
+  left: 0;
+}
+
+.input-group:hover svg, .input-group:focus svg, .form-input:not(:placeholder-shown)~label>svg {
+  fill: var(--focus-color);
+}
+
+.comment-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.comment {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.comment-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), top 250ms cubic-bezier(0.4, 0, 0.2, 1), left 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-container:hover .comment, .comment-container:focus .comment, .comment:not(:placeholder-shown) {
+  border: 1px solid var(--focus-color);
+}
+
+.comment-container:hover .comment-label, .comment-container:focus .comment-label, .comment:not(:placeholder-shown)~.comment-label {
+  top: -20px;
+  left: 16px;
+  color: var(--focus-color);
+}
+
+.checkbox-input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1, 7;
+  color: var(--primary-text-color);
+}
+
+.checkbox-icon {
+  height: 15px;
+  width: 16px;
+  fill: none;
+  background-color: var(--primary-white-color);
+  border-radius: 2px;
+  border: 2px solid var(--title-nav-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 50ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked~label>.checkbox-icon {
+  fill: var(--primary-white-color);
+  border: none;
+  background-color: var(--focus-color);
+}
+
+.licence-agreement {
+  color: var(--focus-color);
+  text-decoration: underline;
+}
+
+.checkbox-submitt-button {
+  display: block;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--focus-color);
 }
 
 /* Portfolio specific page styles */
